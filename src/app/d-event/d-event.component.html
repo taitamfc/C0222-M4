@@ -1,0 +1,13 @@
+<p>d-event works!</p>
+<h1> {{ count }} </h1>
+<h1> {{ name }} </h1>
+<button type="button" (click)="handleClick()">CLICK</button>
+
+<input type="text" (keyup)="handleChange( $event )" >
+
+<input #phone type="text" id="phone" (keyup)="handleChange2( phone.value )">
+
+<!-- 
+    #phone = 
+    var phone = document.getElementById('#phone');
+ -->
