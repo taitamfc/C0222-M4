@@ -1,0 +1,21 @@
+<p>j-ng-class works!</p>
+
+
+<button 
+    class="btn" 
+    [class.btn-primary]="true"
+    [class.btn-info]="true"
+    type="button"> CLICK </button>
+
+    <button 
+    [ngClass]="{
+        'btn-primary' : true,
+        'btn-info' : true,
+        'text-danger': true
+    }"
+    class="btn" type="button"> CLICK </button>
+
+    <button 
+    [ngClass]="setClasses()"
+    class="btn" type="button"> CLICK </button>
+

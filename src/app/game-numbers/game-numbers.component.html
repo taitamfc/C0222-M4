@@ -1,0 +1,20 @@
+<p>game-numbers works!</p>
+<h1>{{ playerName | uppercase }} - {{ point | vndformat }} </h1>
+<!-- <h1> {{ numbers | json }} </h1> -->
+<div class="row">
+    <div class="col mb-1" *ngFor=" let number of numbers; let key = index ">
+        <button
+            (click)="handleClick(number)"
+            *ngIf=" number < 10 && number > point" 
+            class="btn btn-primary" 
+            [class.btn-danger]=" number <= point "
+            style="width: 100%;" type="button"> 0{{ number }}  </button>
+
+        <button 
+            (click)="handleClick(number)"
+            *ngIf=" number >= 10 && number > point" 
+            [class.btn-danger]=" number <= point "
+            class="btn btn-primary" 
+            style="width: 100%;" type="button"> {{ number }}  </button>
+    </div>
+</div>
