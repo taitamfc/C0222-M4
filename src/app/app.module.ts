@@ -14,6 +14,8 @@ import { JNgClassComponent } from './j-ng-class/j-ng-class.component';
 import { KNgStyleComponent } from './k-ng-style/k-ng-style.component';
 import { GameNumbersComponent } from './game-numbers/game-numbers.component';
 import { VndformatPipe } from './vndformat.pipe';
+import { NInputComponent } from './n-input/n-input.component';
+import { OOutputComponent } from './o-output/o-output.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { VndformatPipe } from './vndformat.pipe';
     JNgClassComponent,
     KNgStyleComponent,
     GameNumbersComponent,
-    VndformatPipe
+    VndformatPipe,
+    NInputComponent,
+    OOutputComponent
   ],
   imports: [
     BrowserModule,

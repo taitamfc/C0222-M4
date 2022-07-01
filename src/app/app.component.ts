@@ -11,6 +11,21 @@ export class AppComponent {
   age:Number = 18;
   link:String = 'https://github.com';
 
+  products : any[] = [
+    {
+      id: 1,
+      name: 'San pham A'
+    },
+    {
+      id: 2,
+      name: 'San pham B'
+    }
+  ];
+
+  appComponentAnswer( event:any ):void {
+    alert( event );
+  }
+
 
 }
 

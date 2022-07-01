@@ -11,6 +11,9 @@ export class GameNumbersComponent implements OnInit {
   numbers : number[] = [];
   point: any = 0;
   next: any = 1;
+  classes:string[] = [
+    'btn-primary','btn-secondary','btn-success'
+  ];
   constructor() { }
 
   ngOnInit(): void {
@@ -28,6 +31,14 @@ export class GameNumbersComponent implements OnInit {
       this.point  = 0;
       this.next   = 1;
       alert('Game over !')
+    }
+  }
+
+  setClasses(){
+    let randomIndex = Math.floor(Math.random() * 2) + 0;
+    let classCss = this.classes[randomIndex];
+    return {
+      classCss
     }
   }
 

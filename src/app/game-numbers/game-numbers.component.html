@@ -6,7 +6,8 @@
         <button
             (click)="handleClick(number)"
             *ngIf=" number < 10 && number > point" 
-            class="btn btn-primary" 
+            class="btn"
+            [ngClass]="setClasses()" 
             [class.btn-danger]=" number <= point "
             style="width: 100%;" type="button"> 0{{ number }}  </button>
 
