@@ -16,6 +16,11 @@ import { GameNumbersComponent } from './game-numbers/game-numbers.component';
 import { VndformatPipe } from './vndformat.pipe';
 import { NInputComponent } from './n-input/n-input.component';
 import { OOutputComponent } from './o-output/o-output.component';
+import { ListComponent } from './app-CRUD/components/list.component';
+import { AddComponent } from './app-CRUD/components/add.component';
+import { EditComponent } from './app-CRUD/components/edit.component';
+import { DeleteComponent } from './app-CRUD/components/delete.component';
+import { MenuComponent } from './app-CRUD/includes/menu.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,12 @@ import { OOutputComponent } from './o-output/o-output.component';
     GameNumbersComponent,
     VndformatPipe,
     NInputComponent,
-    OOutputComponent
+    OOutputComponent,
+    ListComponent,
+    AddComponent,
+    EditComponent,
+    DeleteComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
