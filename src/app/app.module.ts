@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BPropertyComponent } from './b-property/b-property.component';
@@ -21,6 +21,8 @@ import { AddComponent } from './app-CRUD/components/add.component';
 import { EditComponent } from './app-CRUD/components/edit.component';
 import { DeleteComponent } from './app-CRUD/components/delete.component';
 import { MenuComponent } from './app-CRUD/includes/menu.component';
+import { UTemplateDrivenComponent } from './u-template-driven/u-template-driven.component';
+import { VDataDrivenComponent } from './v-data-driven/v-data-driven.component';
 
 @NgModule({
   declarations: [
@@ -42,11 +44,14 @@ import { MenuComponent } from './app-CRUD/includes/menu.component';
     AddComponent,
     EditComponent,
     DeleteComponent,
-    MenuComponent
+    MenuComponent,
+    UTemplateDrivenComponent,
+    VDataDrivenComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

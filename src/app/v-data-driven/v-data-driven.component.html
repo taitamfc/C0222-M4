@@ -1,0 +1,25 @@
+<form [formGroup]="formProfile" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="full_name">Full name</label>
+        <input type="text" id="full_name" class="form-control" 
+        formControlName="full_name"
+        name="full_name"
+        >
+        <small *ngIf="formProfile.controls['full_name'].invalid && (formProfile.controls['full_name'].dirty || formProfile.controls['full_name'].touched)" class="form-text text-danger">Username is required</small>
+
+      </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" 
+      formControlName="email" 
+      name="email">
+      <small *ngIf="formProfile.controls['email'].invalid && (formProfile.controls['email'].dirty || formProfile.controls['email'].touched)" class="form-text text-danger">Email is required</small>
+
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password">
+    </div>
+    <button [disabled]="formProfile.invalid" type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  
