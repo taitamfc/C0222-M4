@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
+import { AppRoutingModule } from "./app-routing.module";
+
 import { AppComponent } from './app.component';
 import { BPropertyComponent } from './b-property/b-property.component';
 import { CAttributeComponent } from './c-attribute/c-attribute.component';
@@ -51,7 +53,8 @@ import { VDataDrivenComponent } from './v-data-driven/v-data-driven.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

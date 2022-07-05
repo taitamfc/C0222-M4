@@ -3,25 +3,30 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+            <tr *ngFor="let product of products; let i = index">
+                <th scope="row">#</th>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>
+                    <a class="btn btn-info" [routerLink]="['/edit',i]">Edit</a>
+                </td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
+            <!-- <ng-template *ngIf="products.length else noRecords" >
+                
+            </ng-template>
 
+            <ng-template #noRecords>
+                <tr>
+                    <td col-span="4"> No Data </td>
+                </tr>
+            </ng-template> -->
+            
         </tbody>
 
     </table>
