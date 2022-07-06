@@ -26,6 +26,8 @@ import { MenuComponent } from './app-CRUD/includes/menu.component';
 import { UTemplateDrivenComponent } from './u-template-driven/u-template-driven.component';
 import { VDataDrivenComponent } from './v-data-driven/v-data-driven.component';
 
+import { SharedModule } from "./shared/shared.module";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +56,8 @@ import { VDataDrivenComponent } from './v-data-driven/v-data-driven.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
