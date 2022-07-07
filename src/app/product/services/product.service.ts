@@ -1,55 +1,45 @@
 import { Injectable } from '@angular/core';
 import { Product } from './../interfaces/product';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+import {environment} from './../../../environments/environment';
+const API_URL = `${environment.api_url}`;
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  products: Product[] = [
-    {
-        name:'Iphone 1',
-        price:20000
-    },
-    {
-      name:'Iphone 2',
-      price:40000
-    }
-  ];
+  constructor(
+    private http:HttpClient
+  ) { }
 
-  constructor() { }
-
-  getAll(): Product[]{
-    return this.products;
+  getAll():Observable<Product[]> {
+    return this.http.get<Product[]>(API_URL + '/students');
   }
   //lay 1 item theo id
-  find( id:any ):Product {
-    return this.products[id];
+  find( id:any ):void {
+    
   }
 
   //store
   store( product:Product ):void{
-    this.products.push(product);
+    
   }
 
   //update
   update( id:number, product:Product ):void{
-    this.products[id] = product;
+    
   }
 
   //destroy
   destroy( id:number):void{
-    this.products.splice(id,1);
+    
   }
 
   //search
-  search( q:any ):Product[] {
-    let results:Product[] = [];
-    for( let product of this.products ){
-      if(product.name == q){
-        results.push(product);
-      }
-    }
-    return results;
+  search( q:any ):void {
+    
   }
 }
